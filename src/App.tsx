@@ -1,6 +1,22 @@
+import { useState } from 'react'
+import { Todos } from './Components/Todos'
+
+const mockTodos = [
+  {
+    id: '2',
+    title: 'todo 2',
+    completed: false
+  },
+  {
+    id: '3',
+    title: 'todo 3',
+    completed: false
+  }
+]
 const App = (): JSX.Element => {
+  const [todos] = useState(mockTodos)
   return (
-    <h1>todo TS+ract</h1>
+    <Todos todos={todos} />
   )
 }
 
